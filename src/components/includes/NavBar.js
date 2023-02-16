@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function NavBar() {
@@ -38,8 +39,9 @@ function NavBar() {
           </RightSide>
         </Wrapper>
       </Header>
-      <Wrapper>
-        <LeftContainer>
+
+      <LeftContainer>
+        <Wrapper2>
           <MenuContainer>
             <ListItem className="Title">MENU</ListItem>
             <ListItemLink>
@@ -80,23 +82,27 @@ function NavBar() {
             <ButtonImage src="" alt="" />
             connect wallet
           </Button>
-        </LeftContainer>
-      </Wrapper>
+        </Wrapper2>
+      </LeftContainer>
     </MainContainer>
   );
 }
 export default NavBar;
 
-const MainContainer = styled.div``;
+const MainContainer = styled.div`
+  background: #000;
+  height: 100vh;
+`;
 const Header = styled.header`
   height: 100px;
-  background: #111;
+  background: #1B1C30;
+  display: flex;
 `;
 const Wrapper = styled.div`
   width: 95%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
 `;
 const LogoBox = styled.div`
@@ -109,8 +115,12 @@ const LogoImage = styled.img`
 const LeftSide = styled.div`
   display: flex;
   align-items: center;
+  margin-left: 100px;
+  margin-right: 450px;
 `;
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+  margin-right: 5px;
+`;
 const IconImage = styled.img``;
 const Heading = styled.h2``;
 const RightSide = styled.div`
@@ -134,12 +144,23 @@ const ArrowImage = styled.img``;
 
 const LeftContainer = styled.div`
   width: 15%;
-  height: 100vh;
+  height: calc(100vh - 100px);
   background: #333;
+  margin-top: -19px;
+`;
+const Wrapper2 = styled.div`
+  width: 82%;
+  margin-left: auto;
 `;
 const MenuContainer = styled.div``;
-const ListItem = styled.h3``;
-const ListItemLink = styled.a``;
+const ListItem = styled.h3`
+  margin-bottom: 40px;
+`;
+const ListItemLink = styled.a`
+  display: block;
+  margin-bottom: 40px;
+  margin-top: 20px;
+`;
 const Icon1 = styled.small`
   background: url(../../Assets/images/icons.svg);
   display: inline-block;
@@ -156,5 +177,11 @@ const ReverseImage = styled.img``;
 const Icon6 = styled.small``;
 const Icon7 = styled.small``;
 const MoveImage = styled.img``;
-const Button = styled.button``;
+const Button = styled.button`
+  padding: 12px 30px;
+  background:linear-gradient(to right, #aabbee, #20b8fe);
+  border: 2px solid;
+  border-radius:24px;
+  
+`;
 const ButtonImage = styled.img``;
