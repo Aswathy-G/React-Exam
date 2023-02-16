@@ -85,6 +85,7 @@ function NavBar() {
         </Wrapper2>
       </LeftContainer>
     </MainContainer>
+    
   );
 }
 export default NavBar;
@@ -145,7 +146,7 @@ const ArrowImage = styled.img``;
 const LeftContainer = styled.div`
   width: 15%;
   height: calc(100vh - 100px);
-  background: #333;
+  background: #1B1C30;
   margin-top: -19px;
 `;
 const Wrapper2 = styled.div`
@@ -155,11 +156,18 @@ const Wrapper2 = styled.div`
 const MenuContainer = styled.div``;
 const ListItem = styled.h3`
   margin-bottom: 40px;
+  font-size: 15px;
+  color: #4d525f;
+  margin-left: -5px;
+  
 `;
 const ListItemLink = styled.a`
   display: block;
   margin-bottom: 40px;
   margin-top: 20px;
+  color: #4d525f;
+  margin-left: 25px;
+  
 `;
 const Icon1 = styled.small`
   background: url(../../Assets/images/icons.svg);
@@ -181,7 +189,8 @@ const Button = styled.button`
   padding: 12px 30px;
   background:linear-gradient(to right, #aabbee, #20b8fe);
   border: 2px solid;
-  border-radius:24px;
+  border-radius: 24px;
+  color: #fff;
   
 `;
 const ButtonImage = styled.img``;
