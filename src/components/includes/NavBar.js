@@ -4,11 +4,36 @@ import styled from "styled-components";
 function NavBar() {
   return (
     <MainContainer>
-      <LeftContainer>
+      <Header>
         <LogoImage
-          src={require("../../Assets/images/Logo.jpg")}
+          src={require("../../Assets/images/logo.png")}
           alt="Image"
         ></LogoImage>
+        <LeftSide>
+          <ImageContainer>
+            <IconImage src="" alt="Image" />
+          </ImageContainer>
+          <Heading>Overview</Heading>
+        </LeftSide>
+        <RightSide>
+          <IconContainer>
+            <Image src="" alt="Image" />
+            <Image src="" alt="Image" />
+            <Image src="" alt="Image" />
+          </IconContainer>
+          <Title>Reports</Title>
+          <ImageSection
+            src={require("../../Assets/images/Rectangle profile.jpg")}
+            alt="Image"
+          ></ImageSection>
+          <Header>wade warren</Header>
+          <ArrowImage>
+            <Image src="" alt="Image" />
+          </ArrowImage>
+        </RightSide>
+      </Header>
+
+      <LeftContainer>
         <MenuContainer>
           <ListItem className="Title">MENU</ListItem>
           <ListItemLink>
@@ -18,9 +43,7 @@ function NavBar() {
             Overview
           </ListItemLink>
           <ListItemLink>
-            <ImageContainer>
-              <Image src="" alt="Trader Profile" />
-            </ImageContainer>
+            <Icon1></Icon1>
             Trader Profile
           </ListItemLink>
           <ListItemLink>
@@ -69,14 +92,45 @@ function NavBar() {
 }
 export default NavBar;
 
-
 const MainContainer = styled.div``;
-const LeftContainer = styled.div``;
+const Header = styled.header`
+  width: 100px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+`;
+
 const LogoImage = styled.img``;
+const LeftSide = styled.div``;
+const ImageContainer = styled.div``;
+const IconImage = styled.img``;
+const Heading = styled.h2``;
+const RightSide = styled.div``;
+const IconContainer = styled.div``;
+const Image = styled.img``;
+const Title = styled.h3``;
+const ImageSection = styled.img``;
+const Header = styled.h3``;
+const ArrowImage = styled.div``;
+const Image = styled.img``;
+
+
+const LeftContainer = styled.div`
+  width: 15%;
+  height: 100vh;
+  background: #333;
+`;
 const MenuContainer = styled.div``;
 const ListItem = styled.h3``;
 const ListItemLink = styled.a``;
 const ImageContainer = styled.div``;
+const Icon1 = styled.small`
+  background: url(../../Assets/images/icons.svg);
+  display: inline-block;
+  width: 23px;
+  height: 22px;
+  background-position: 20px 21px;
+`;
 const Image = styled.img``;
 const Button = styled.button``;
 const ButtonImage = styled.img``;

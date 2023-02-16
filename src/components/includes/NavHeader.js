@@ -17,7 +17,7 @@ export default function NavHeader() {
                    <Image src="" alt="Image"/>
                </IconContainer>
                <Title>Reports</Title>
-               <ImageSection src={require("../../Assets/images/Rectangle profile.jpg").default}
+               <ImageSection src={require("../../Assets/images/Rectangle profile.jpg")}
                   alt="Image"></ImageSection>
                 <Header>wade warren</Header>
                 <ArrowImage>
@@ -30,13 +30,8 @@ export default function NavHeader() {
 }
 
 const Container = styled.div``;
-const LeftSide = styled.div``;
-const ImageContainer = styled.div``;
 const Heading = styled.h1``;
-const RightSide = styled.div``;
-const IconContainer = styled.div``;
-const Title = styled.h3``;
-const ImageSection = styled.img``;
+
 const Header = styled.h3``;
 const ArrowImage = styled.div``;
 const Image = styled.img``;
