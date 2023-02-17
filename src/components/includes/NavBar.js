@@ -24,6 +24,7 @@ function NavBar() {
             <IconContainer>
               <IconImage2></IconImage2>
               <IconImage3></IconImage3>
+              <GraphIcon></GraphIcon>
             </IconContainer>
             <Title>Reports</Title>
             <ImageSection>
@@ -94,7 +95,7 @@ export default NavBar;
 //   height: 100vh;
 // `;
 const Header = styled.header`
-  height: 100px;
+  height: 80px;
   background: #1b1c30;
   display: flex;
 `;
@@ -140,7 +141,7 @@ const IconImage2 = styled(IconImage)`
 const IconImage3 = styled(IconImage)`
   background-position: -421px -160px;
 `;
-
+const GraphIcon = styled.img``;
 const Title = styled.h3``;
 const ImageSection = styled.div`
   width: 40px;
@@ -158,7 +159,7 @@ const ArrowImage = styled(IconImage)`
 
 const LeftContainer = styled.div`
   width: 15%;
-  height: calc(100vh - 81px);
+  height: calc(100vh - 61px);
   background: #1b1c30;
   margin-top: -19px;
   display: inline-block;
@@ -180,6 +181,10 @@ const ListItemLink = styled.a`
   margin-bottom: 30px;
   color: #4d525f;
   // margin-left: 25px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
 `;
 const Icon1 = styled.small`
   background: url(${image});
@@ -187,6 +192,7 @@ const Icon1 = styled.small`
   width: 24px;
   height: 24px;
   background-position: -20px -103px;
+  margin-right: 19px;
 `;
 const Icon2 = styled(Icon1)`
   background-position: -61px -103px;
@@ -195,9 +201,10 @@ const Icon3 = styled(Icon1)`
   background-position: -140px -103px;
 `;
 const DownArrow = styled(Icon1)`
-width: 24px;
+  width: 24px;
   height: 18px;
-  background-position: -302px -172px;
+  background-position: -303px -105px;
+  margin-left: 13px;
 `;
 const Icon4 = styled(Icon1)`
   background-position: -182px -103px;
