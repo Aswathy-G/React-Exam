@@ -4,6 +4,7 @@ import styled from "styled-components";
 import image from "../../Assets/images/icons.svg";
 
 function NavBar() {
+
   return (
     <>
       <Header>
@@ -49,39 +50,39 @@ function NavBar() {
               <Icon1></Icon1>
               Overview
             </ListItemLink>
-            <ListItemLink>
+            <ListItemLink to="/traderprofile">
               <Icon2></Icon2>
               Trader Profile
             </ListItemLink>
-            <ListItemLink>
+            <ListItemLink to="/echart">
               <Icon3></Icon3>
               Echart
               <DownArrow></DownArrow>
             </ListItemLink>
-            <ListItemLink>
+            <ListItemLink to="/mailbox">
               <Icon4></Icon4>
               Mailbox
             </ListItemLink>
-            <ListItemLink>
+            <ListItemLink to="/pages">
               <Icon5></Icon5>
               Pages
               <DownArrow></DownArrow>
             </ListItemLink>
             <ListItem className="Title">OTHERS</ListItem>
-            <ListItemLink>
+            <ListItemLink to="/support">
               <Icon6></Icon6>
               Support
             </ListItemLink>
-            <ListItemLink>
+            <ListItemLink to="/settings">
               <Icon7></Icon7>
               Settings
               <DownArrow></DownArrow>
             </ListItemLink>
           </MenuContainer>
           <Button>
-            <PlusArrow></PlusArrow>
-            <ButtonImage src="" alt="" />
+            <PlusIcon></PlusIcon>
             connect wallet
+            <RightArrow></RightArrow>
           </Button>
         </Wrapper2>
       </LeftContainer>
@@ -121,12 +122,12 @@ const LeftSide = styled.div`
 `;
 const ImageContainer = styled.div`
   margin-right: 8px;
-  padding:8px;
-  border-radius:24px;
-  background:#2d2d2d;
+  padding: 8px;
+  border-radius: 24px;
+  background: #2d2d2d;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 `;
 const IconImage = styled.small`
   background: url(${image});
@@ -202,8 +203,9 @@ const ListItem = styled.h3`
   color: #4d525f;
   margin-left: -5px;
 `;
-const ListItemLink = styled.a`
+const ListItemLink = styled(Link)`
   display: block;
+  text-decoration: none;
   margin-bottom: 30px;
   color: #4d525f;
   // margin-left: 25px;
@@ -245,19 +247,26 @@ const Icon7 = styled(Icon1)`
   background-position: -221px -104px;
 `;
 const Button = styled.button`
-  padding: 12px 30px;
+  padding: 12px 7px;
   background: linear-gradient(to right, #aabbee, #20b8fe);
   border: 2px solid;
   border-radius: 24px;
   color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
-const ButtonImage = styled.img`
-   
-`;
-const PlusArrow = styled.img`
+const PlusIcon = styled.small`
   background: url(${image});
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-position: -20px -103px;
+  width: 20px;
+  height: 20px;
+  background-position: -427px -109px;
+  margin-right: 7px;
+`;
+const RightArrow = styled(PlusIcon)`
+  width: 22px;
+  height: 16px;
+  background-position: -305px -176px;
+  margin-left: 7px;
 `;
