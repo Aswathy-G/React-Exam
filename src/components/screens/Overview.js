@@ -16,11 +16,12 @@ function Overview() {
           </IconContainer>
           <SubHeading>Bitcoin</SubHeading>
           <NumberContainer>
-            <Number>$48,789.50 -58%</Number>
+            <NumberLeft>$48,789.50</NumberLeft>
+            <NumberRight>-58%</NumberRight>
+            <LogoImage>
+              <Arrow></Arrow>
+            </LogoImage>
           </NumberContainer>
-          <LogoImage>
-            <Arrow></Arrow>
-          </LogoImage>
         </Box1>
         <Box2>
           <LightContainer>
@@ -32,11 +33,12 @@ function Overview() {
           </LightContainer>
           <SubHeading>Ethereum</SubHeading>
           <NumberContainer>
-            <Number>$48,789 +0.58%</Number>
+            <NumberLeft>$48,789</NumberLeft>
+            <NumberRight>+0.58%</NumberRight>
+            <LogoImage>
+              <Arrow></Arrow>
+            </LogoImage>
           </NumberContainer>
-          <LogoImage>
-            <Arrow></Arrow>
-          </LogoImage>
         </Box2>
         <Box3>
           <DarkContainer>
@@ -48,11 +50,14 @@ function Overview() {
           </DarkContainer>
           <SubHeading>Steller</SubHeading>
           <NumberContainer>
-            <Number>$489.50 +2.58%</Number>
+            <NumberLeft>$489.50</NumberLeft>
+            <NumberRight>
+              -58%
+              <LogoImage>
+                  <Arrow></Arrow>
+              </LogoImage>
+            </NumberRight>
           </NumberContainer>
-          <LogoImage>
-            <Arrow></Arrow>
-          </LogoImage>
         </Box3>
         <Box4>
           <GreyContainer>
@@ -64,11 +69,14 @@ function Overview() {
           </GreyContainer>
           <SubHeading>Solana</SubHeading>
           <NumberContainer>
-            <Number>$489.50 -0.88%</Number>
+            <NumberLeft>$489.50</NumberLeft>
+            <NumberRight>
+              -0.88%
+              <LogoImage>
+                <Arrow></Arrow>
+              </LogoImage>
+            </NumberRight>
           </NumberContainer>
-          <LogoImage>
-            <Arrow></Arrow>
-          </LogoImage>
         </Box4>
       </BoxContainer>
     </Container>
@@ -77,19 +85,24 @@ function Overview() {
 export default Overview;
 
 const Container = styled.div`
-  display: inline;
-  width: 50%;
+  // display: flex;
+  width: 85%;
+  position: absolute;
+  top: 110px;
+  right: 0px;
 `;
 const BoxContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  widht: 80%;
+  justify-content: space-evenly;
+  // width: 97%;
 `;
 const Box1 = styled.div`
-  // width: 25%;
-  height: 110px;
+  width: 18%;
+  // height: 130px;
   background: #20b8fe;
   padding: 20px;
+  // justify-content: space-between;
+  border-radius: 24px;
 `;
 const IconContainer = styled.div`
   display: flex;
@@ -106,47 +119,71 @@ const IconImage1 = styled.small`
 `;
 const Button = styled.button`
   color: #fff;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
+  border: none;
 `;
 const SubHeading = styled.h3`
   color: #fff;
+  // margin: 2px;
 `;
-const NumberContainer = styled.div``;
-const Number = styled.h5`
+const NumberContainer = styled.div`
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+`;
+const NumberLeft = styled.h5`
   color: #fff;
 `;
+const NumberRight = styled.h5`
+  color: #fff;
+  display: flex;
+`;
 const LogoImage = styled.div``;
-const Arrow = styled.small``;
+const Arrow = styled(IconImage1)`
+  background-position: -474px -115px;
+`;
 const Box2 = styled.div`
-  // width: 15%;
-  height: 110px;
-  background: #5531fa;
+  width: 18%;
+  // height: 150px;
+  background: linear-gradient(to right, #5531fa, #aabbee);
+  padding: 20px;
+  // justify-content: space-between;
+  border-radius: 24px;
 `;
 const LightContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 const Image2 = styled.div``;
 const IconImage2 = styled(IconImage1)`
   background-position: -425px -54px;
 `;
 const Box3 = styled.div`
-  // width: 15%;
-  height: 110px;
-  background: #55A55E;
+  width: 18%;
+  // height: 150px;
+  background: #55a55e;
+  padding: 20px;
+  justify-content: space-between;
+  border-radius: 24px;
 `;
 const DarkContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 const Image3 = styled.div``;
 const Box4 = styled.div`
-  // width: 15%;
-  height: 110px;
+  width: 18%;
+  // height: 150px;
   background: linear-gradient(to right, #20b8fe, #aabbee);
+  padding: 20px;
+  justify-content: space-between;
+  border-radius: 24px;
 `;
 const GreyContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 const Image4 = styled.div``;
