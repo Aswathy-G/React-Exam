@@ -33,7 +33,7 @@ function NavBar() {
                 alt="Image"
               />
             </ImageSection>
-            <SubHeader>wade warren</SubHeader>
+            <SubHeader>Wade Warren</SubHeader>
             <ArrowContainer>
               <ArrowImage></ArrowImage>
             </ArrowContainer>
@@ -79,7 +79,7 @@ function NavBar() {
             </ListItemLink>
           </MenuContainer>
           <Button>
-            <ButtonImage src="" alt="" />
+            <PlusArrow></PlusArrow>
             <ButtonImage src="" alt="" />
             connect wallet
           </Button>
@@ -120,7 +120,13 @@ const LeftSide = styled.div`
   margin-right: 450px;
 `;
 const ImageContainer = styled.div`
-  margin-right: 5px;
+  margin-right: 8px;
+  padding:8px;
+  border-radius:24px;
+  background:#2d2d2d;
+  display: flex;
+  align-items: center;
+  justify-content:center;
 `;
 const IconImage = styled.small`
   background: url(${image});
@@ -128,21 +134,38 @@ const IconImage = styled.small`
   width: 24px;
   height: 24px;
   background-position: -459px -208px;
+
+  -items: align center;
 `;
-const Heading = styled.h2``;
+const Heading = styled.h2`
+  color: #fff;
+  margin-top: 15px;
+  font-size: 24px;
+`;
 const RightSide = styled.div`
   display: flex;
+  width: 30%;
   align-items: center;
+  justify-content: space-between;
+  margin-right: 5px;
 `;
-const IconContainer = styled.div``;
+const IconContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 const IconImage2 = styled(IconImage)`
   background-position: -458px -161px;
+  margin-right: 10px;
 `;
 const IconImage3 = styled(IconImage)`
   background-position: -421px -160px;
+  margin-right: 10px;
 `;
 const GraphIcon = styled.img``;
-const Title = styled.h3``;
+const Title = styled.h3`
+  color: #fff;
+  font-size: 16px;
+`;
 const ImageSection = styled.div`
   width: 40px;
 `;
@@ -151,7 +174,10 @@ const Person = styled.img`
   display: block;
   border-radius: 50%;
 `;
-const SubHeader = styled.h3``;
+const SubHeader = styled.h3`
+  color: #fff;
+  font-size: 16px;
+`;
 const ArrowContainer = styled.div``;
 const ArrowImage = styled(IconImage)`
   background-position: -305px -172px;
@@ -184,7 +210,6 @@ const ListItemLink = styled.a`
   display: flex;
   align-items: center;
   margin-left: 10px;
-
 `;
 const Icon1 = styled.small`
   background: url(${image});
@@ -226,4 +251,13 @@ const Button = styled.button`
   border-radius: 24px;
   color: #fff;
 `;
-const ButtonImage = styled.img``;
+const ButtonImage = styled.img`
+   
+`;
+const PlusArrow = styled.img`
+  background: url(${image});
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-position: -20px -103px;
+`;
