@@ -17,10 +17,12 @@ function Overview() {
           <SubHeading>Bitcoin</SubHeading>
           <NumberContainer>
             <NumberLeft>$48,789.50</NumberLeft>
-            <NumberRight>-58%</NumberRight>
-            <LogoImage>
-              <Arrow></Arrow>
-            </LogoImage>
+            <NumberRight>
+              -58%
+              <LogoImage>
+                 <Arrow></Arrow>
+              </LogoImage>
+            </NumberRight>
           </NumberContainer>
         </Box1>
         <Box2>
@@ -34,10 +36,12 @@ function Overview() {
           <SubHeading>Ethereum</SubHeading>
           <NumberContainer>
             <NumberLeft>$48,789</NumberLeft>
-            <NumberRight>+0.58%</NumberRight>
-            <LogoImage>
-              <Arrow></Arrow>
-            </LogoImage>
+            <NumberRight>
+              +0.58%
+              <LogoImage>
+                 <Arrow></Arrow>
+              </LogoImage>
+            </NumberRight>
           </NumberContainer>
         </Box2>
         <Box3>
@@ -79,8 +83,104 @@ function Overview() {
           </NumberContainer>
         </Box4>
       </BoxContainer>
+          
+      <SidebarContainer>
+             <ListContainer>
+                  <Left>Market Status</Left>
+                  <Right>
+                    <Button1>View all</Button1>
+                  </Right>
+             </ListContainer>
+             <TextContainer1>
+                <NoteContainer>
+                   <Icon></Icon>
+                </NoteContainer>
+                <TotalContainer>
+                  <Text>Total Supply</Text>
+                  <Number>17.5M</Number>
+                </TotalContainer>
+                <MaxContainer>
+                  <Text>Max Supply</Text>
+                  <Down></Down>
+                  <Number>17.5%</Number>
+                </MaxContainer>
+             </TextContainer1>
+             <TextContainer2>
+                <NoteContainer>
+                   <Icon></Icon>
+                </NoteContainer>
+                <TotalContainer>
+                  <Text>Total Supply</Text>
+                  <Number>17.5M</Number>
+                </TotalContainer>
+                <MaxContainer>
+                  <Text>Max Supply</Text>
+                  <Down></Down>
+                  <Number>17.5%</Number>
+                </MaxContainer>
+             </TextContainer2>
+             <TextContainer3>
+                <NoteContainer>
+                   <Icon></Icon>
+                </NoteContainer>
+                <TotalContainer>
+                  <Text>Total Supply</Text>
+                  <Number>17.5M</Number>
+                </TotalContainer>
+                <MaxContainer>
+                  <Text>Max Supply</Text>
+                  <Down></Down>
+                  <Number>17.5%</Number>
+                </MaxContainer>
+             </TextContainer3>
+             <TextContainer4>
+                <NoteContainer>
+                   <Icon></Icon>
+                </NoteContainer>
+                <TotalContainer>
+                  <Text>Total Supply</Text>
+                  <Number>17.5M</Number>
+                </TotalContainer>
+                <MaxContainer>
+                  <Text>Max Supply</Text>
+                  <Down></Down>
+                  <Number>17.5%</Number>
+                </MaxContainer>
+             </TextContainer4>
+             <TextContainer5>
+                <NoteContainer>
+                   <Icon></Icon>
+                </NoteContainer>
+                <TotalContainer>
+                  <Text>Total Supply</Text>
+                  <Number>17.5M</Number>
+                </TotalContainer>
+                <MaxContainer>
+                  <Text>Max Supply</Text>
+                  <Down></Down>
+                  <Number>17.5%</Number>
+                </MaxContainer>
+             </TextContainer5>
+             <TextContainer6>
+                <NoteContainer>
+                   <Icon></Icon>
+                </NoteContainer>
+                <TotalContainer>
+                  <Text>Total Supply</Text>
+                  <Number>17.5M</Number>
+                </TotalContainer>
+                <MaxContainer>
+                  <Text>Max Supply</Text>
+                  <Down></Down>
+                  <Number>17.5%</Number>
+                </MaxContainer>
+             </TextContainer6>
+      </SidebarContainer>
     </Container>
+    
+
   );
+
 }
 export default Overview;
 
@@ -97,7 +197,7 @@ const BoxContainer = styled.div`
   // width: 97%;
 `;
 const Box1 = styled.div`
-  width: 18%;
+  width: 17%;
   // height: 130px;
   background: #20b8fe;
   padding: 20px;
@@ -109,13 +209,20 @@ const IconContainer = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-const Image1 = styled.div``;
+const Image1 = styled.div`
+  border-radius: 50%;
+  background: #D9D9D9;
+  width: 25px;
+  height: 26px;
+  align-items: center;
+`;
 const IconImage1 = styled.small`
   background: url(${image});
   display: inline-block;
   width: 18px;
   height: 20px;
-  background-position: -425px -22px;
+  // background-position: -425px -22px;
+  background-position:-420px -18px;
 `;
 const Button = styled.button`
   color: #fff;
@@ -124,7 +231,7 @@ const Button = styled.button`
 `;
 const SubHeading = styled.h3`
   color: #fff;
-  // margin: 2px;
+  margin: 2px;
 `;
 const NumberContainer = styled.div`
   color: #fff;
@@ -133,17 +240,19 @@ const NumberContainer = styled.div`
 `;
 const NumberLeft = styled.h5`
   color: #fff;
+  margin: 2px;
 `;
 const NumberRight = styled.h5`
   color: #fff;
   display: flex;
+  margin: 2px;
 `;
 const LogoImage = styled.div``;
 const Arrow = styled(IconImage1)`
   background-position: -474px -115px;
 `;
 const Box2 = styled.div`
-  width: 18%;
+  width: 17%;
   // height: 150px;
   background: linear-gradient(to right, #5531fa, #aabbee);
   padding: 20px;
@@ -160,7 +269,7 @@ const IconImage2 = styled(IconImage1)`
   background-position: -425px -54px;
 `;
 const Box3 = styled.div`
-  width: 18%;
+  width: 17%;
   // height: 150px;
   background: #55a55e;
   padding: 20px;
@@ -174,7 +283,7 @@ const DarkContainer = styled.div`
 `;
 const Image3 = styled.div``;
 const Box4 = styled.div`
-  width: 18%;
+  width: 17%;
   // height: 150px;
   background: linear-gradient(to right, #20b8fe, #aabbee);
   padding: 20px;
@@ -187,3 +296,26 @@ const GreyContainer = styled.div`
   justify-content: space-between;
 `;
 const Image4 = styled.div``;
+
+const SidebarContainer = styled.div``;
+const ListContainer = styled.div``;
+const Left = styled.h3``;
+const Right = styled.button``;
+const Button1 = styled.button``;
+const TextContainer1 = styled.div``;
+const NoteContainer = styled.div``;
+const Icon = styled.small``;
+const TotalContainer = styled.div``;
+const Text = styled.h5``;
+const Number = styled.h3``;
+const MaxContainer = styled.div``;
+const Down = styled.small``;
+const TextContainer2 = styled.div``;
+const TextContainer3 = styled.div``;
+const TextContainer4 = styled.div``;
+const TextContainer5 = styled.div``;
+const TextContainer6 = styled.div``;
+
+
+
+
