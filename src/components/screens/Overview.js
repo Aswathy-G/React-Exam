@@ -88,7 +88,7 @@ function Overview() {
              <ListContainer>
                   <Left>Market Status</Left>
                   <Right>
-                    <Button1>View all</Button1>
+                    <ViewButton>View all</ViewButton>
                   </Right>
              </ListContainer>
              <TextContainer1>
@@ -132,49 +132,7 @@ function Overview() {
                   <Down></Down>
                   <Number>17.5%</Number>
                 </MaxContainer>
-             </TextContainer3>
-             <TextContainer4>
-                <NoteContainer>
-                   <Icon></Icon>
-                </NoteContainer>
-                <TotalContainer>
-                  <Text>Total Supply</Text>
-                  <Number>17.5M</Number>
-                </TotalContainer>
-                <MaxContainer>
-                  <Text>Max Supply</Text>
-                  <Down></Down>
-                  <Number>17.5%</Number>
-                </MaxContainer>
-             </TextContainer4>
-             <TextContainer5>
-                <NoteContainer>
-                   <Icon></Icon>
-                </NoteContainer>
-                <TotalContainer>
-                  <Text>Total Supply</Text>
-                  <Number>17.5M</Number>
-                </TotalContainer>
-                <MaxContainer>
-                  <Text>Max Supply</Text>
-                  <Down></Down>
-                  <Number>17.5%</Number>
-                </MaxContainer>
-             </TextContainer5>
-             <TextContainer6>
-                <NoteContainer>
-                   <Icon></Icon>
-                </NoteContainer>
-                <TotalContainer>
-                  <Text>Total Supply</Text>
-                  <Number>17.5M</Number>
-                </TotalContainer>
-                <MaxContainer>
-                  <Text>Max Supply</Text>
-                  <Down></Down>
-                  <Number>17.5%</Number>
-                </MaxContainer>
-             </TextContainer6>
+             </TextContainer3>                                                             
       </SidebarContainer>
     </Container>
     
@@ -301,7 +259,7 @@ const SidebarContainer = styled.div``;
 const ListContainer = styled.div``;
 const Left = styled.h3``;
 const Right = styled.button``;
-const Button1 = styled.button``;
+const ViewButton = styled.button``;
 const TextContainer1 = styled.div``;
 const NoteContainer = styled.div``;
 const Icon = styled.small``;
@@ -312,9 +270,6 @@ const MaxContainer = styled.div``;
 const Down = styled.small``;
 const TextContainer2 = styled.div``;
 const TextContainer3 = styled.div``;
-const TextContainer4 = styled.div``;
-const TextContainer5 = styled.div``;
-const TextContainer6 = styled.div``;
 
 
 
