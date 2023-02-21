@@ -181,53 +181,53 @@ function Demo() {
               <ChangeContainer>Period</ChangeContainer>
               <ChangeContainer>Change</ChangeContainer>
               <ChangeContainer>Change</ChangeContainer>
-              <ChangeContainer>High</ChangeContainer>
               <ImageArrow>
-                <Arrow />
+                 <ChangeContainer>High</ChangeContainer>
+                 <ArrowMark></ArrowMark>
               </ImageArrow>
-              <ChangeContainer>Low</ChangeContainer>
               <ArrowTag>
-                <TagImage />
+              <ChangeContainer>Low</ChangeContainer>
+              <TagImage></TagImage>
               </ArrowTag>
             </UsContainer>
             <UsContainer1>
               <ChangeContainer1>5 May-12May</ChangeContainer1>
               <ChangeContainer2>-$ 40.45</ChangeContainer2>
               <ChangeContainer3>-0.27%</ChangeContainer3>
-              <ChangeContainer4>$0.21%</ChangeContainer4>
-              <ArrowTab>
-                <ArrowIcon />
-              </ArrowTab>
-              <ChangeContainer5>$0.21%</ChangeContainer5>
-              <Arrow1>
-                <ArrowIcon1 />
-              </Arrow1>
+              <ImageArrow1>
+                 <ChangeContainer4>$0.21%</ChangeContainer4>
+                 <ArrowMark1></ArrowMark1>
+              </ImageArrow1>
+              <ArrowTag>
+                 <ChangeContainer5>$0.21%</ChangeContainer5>
+                 <TagImage></TagImage>
+              </ArrowTag>
             </UsContainer1>
+            <UsContainer3>
+              <ChangeContainer1>5 May-12May</ChangeContainer1>
+              <ChangeContainer2>-$ 40.45</ChangeContainer2>
+              <ChangeContainer3>-0.27%</ChangeContainer3>
+              <ImageArrow1>
+                 <ChangeContainer4>$0.21%</ChangeContainer4>
+                 <ArrowMark1></ArrowMark1>
+              </ImageArrow1>
+              <ArrowTag>
+                  <ChangeContainer5>$0.21%</ChangeContainer5>
+                  <TagImage></TagImage>
+              </ArrowTag>
+            </UsContainer3>
             <UsContainer1>
               <ChangeContainer1>5 May-12May</ChangeContainer1>
               <ChangeContainer2>-$ 40.45</ChangeContainer2>
               <ChangeContainer3>-0.27%</ChangeContainer3>
-              <ChangeContainer4>$0.21%</ChangeContainer4>
-              <ArrowTab>
-                <ArrowIcon />
-              </ArrowTab>
-              <ChangeContainer5>$0.21%</ChangeContainer5>
-              <Arrow1>
-                <ArrowIcon1 />
-              </Arrow1>
-            </UsContainer1>
-            <UsContainer1>
-              <ChangeContainer1>5 May-12May</ChangeContainer1>
-              <ChangeContainer2>-$ 40.45</ChangeContainer2>
-              <ChangeContainer3>-0.27%</ChangeContainer3>
-              <ChangeContainer4>$0.21%</ChangeContainer4>
-              <ArrowTab>
-                <ArrowIcon />
-              </ArrowTab>
-              <ChangeContainer5>$0.21%</ChangeContainer5>
-              <Arrow1>
-                <ArrowIcon1 />
-              </Arrow1>
+              <ImageArrow1>
+                  <ChangeContainer4>$0.21%</ChangeContainer4>
+                  <ArrowMark1></ArrowMark1>
+              </ImageArrow1>
+              <ArrowTag>
+                 <ChangeContainer5>$0.21%</ChangeContainer5>
+                 <TagImage></TagImage>
+              </ArrowTag>
             </UsContainer1>
           </PriceContainer>
         </MainContainer>
@@ -631,16 +631,45 @@ const ImageBar = styled.img`
 
 
 
-const MainContainer = styled.div``;
-const Caption = styled.div``;
+const MainContainer = styled.div`
+  background-color: #171c26;
+`;
+const Caption = styled.div`
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+
+`;
 const PriceContainer = styled.div``;
-const UsContainer = styled.div``;
+const UsContainer = styled.div`
+   display: flex;
+   justify-content: space-between;
+   border:1px solid #000;
+   height:20px;
+`;
+const ArrowMark = styled.small`
+  background: url(${image});
+  display: inline-block;
+  width: 18px;
+  height: 25px;
+  background-position: -472px -19px;
+`;
 const ChangeContainer = styled.div``;
-const ImageArrow = styled.small``;
+const ImageArrow = styled.small`
+   display: flex;
+   justify-content: space-around;
+`;
 const ArrowTab = styled.small``;
 const ArrowTag = styled.div``;
-const TagImage = styled.div``;
-const UsContainer1 = styled.div``;
+const TagImage = styled(ArrowMark)`
+    width: 18px;
+  height: 23px;
+  background-position: -472px -115px;
+`;
+const UsContainer1 = styled.div`
+    display: flex;
+   justify-content: space-between;
+`;
 const ChangeContainer1 = styled.div``;
 const ChangeContainer2 = styled.div``;
 const ChangeContainer3 = styled.div``;
@@ -649,6 +678,21 @@ const ChangeContainer4 = styled.div``;
 const ChangeContainer5 = styled.div``;
 const Arrow1 = styled.div``;
 const ArrowIcon1 = styled.div``;
+const ImageArrow1 = styled.small`
+     display: flex;
+   justify-content: space-around;
+`;
+const ArrowMark1 = styled(ArrowMark)`
+ width: 18px;
+  height: 25px;
+  background-position: -472px -19px;
+`;
+const UsContainer3 = styled.div`
+  display: flex;
+   justify-content: space-between;
+   border:1px solid #000;
+   height:20px;
+`;
 
 
 export default Demo;
