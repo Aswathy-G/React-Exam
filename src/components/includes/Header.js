@@ -1,53 +1,55 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 import image from "../../Assets/images/icons.svg";
-
 
 function Header() {
   return (
     <HeaderSec>
-        <Wrapper>
-          <LogoBox>
+      <Wrapper>
+        <LogoBox>
+          <Link to="/">
+            {" "}
             <LogoImage
               src={require("../../Assets/images/logo.png")}
               alt="Image"
             />
-          </LogoBox>
-          <LeftSide>
-            <ImageContainer>
-              <IconImage></IconImage>
-            </ImageContainer>
-            <Heading>Overview</Heading>
-          </LeftSide>
-          <RightSide>
-            <IconContainer>
-              <IconImage2></IconImage2>
-              <IconImage3></IconImage3>
-              <GraphIcon></GraphIcon>
-            </IconContainer>
-            <Title>Reports</Title>
-            <ImageSection>
-              <Person
-                src={require("../../Assets/images/Rectangle profile.jpg")}
-                alt="Image"
-              />
-            </ImageSection>
-            <SubHeader>Wade Warren</SubHeader>
-            <ArrowContainer>
-              <ArrowImage></ArrowImage>
-            </ArrowContainer>
-          </RightSide>
-        </Wrapper>
-      </HeaderSec>
-  )
+          </Link>
+        </LogoBox>
+        <LeftSide>
+          <ImageContainer>
+            <IconImage></IconImage>
+          </ImageContainer>
+          <Heading>Overview</Heading>
+        </LeftSide>
+        <RightSide>
+          <IconContainer>
+            <IconImage2></IconImage2>
+            <IconImage3></IconImage3>
+            <GraphIcon></GraphIcon>
+          </IconContainer>
+          <Title>Reports</Title>
+          <ImageSection>
+            <Person
+              src={require("../../Assets/images/Rectangle profile.jpg")}
+              alt="Image"
+            />
+          </ImageSection>
+          <SubHeader>Wade Warren</SubHeader>
+          <ArrowContainer>
+            <ArrowImage></ArrowImage>
+          </ArrowContainer>
+        </RightSide>
+      </Wrapper>
+    </HeaderSec>
+  );
 }
-
 const HeaderSec = styled.header`
-  height: 19%;
+  height: 90px;
   background: #1b1c30;
   display: flex;
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
 `;
 const Wrapper = styled.div`
   width: 95%;
@@ -91,7 +93,6 @@ const Heading = styled.h2`
   color: #fff;
   margin-top: 15px;
   font-size: 24px;
-
 `;
 const RightSide = styled.div`
   display: flex;
@@ -134,4 +135,4 @@ const ArrowImage = styled(IconImage)`
   background-position: -305px -172px;
 `;
 
-export default Header
+export default Header;

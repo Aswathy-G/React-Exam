@@ -1,6 +1,6 @@
 import React from "react";
 
-function TraderProfile() {
+function Setting() {
   return (
     <div>
       <h3>Coming Soon......</h3>
@@ -8,4 +8,4 @@ function TraderProfile() {
   );
 }
 
-export default TraderProfile;
+export default Setting;

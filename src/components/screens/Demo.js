@@ -1,21 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Header from "../includes/Header";
-import NavBar from "../includes/NavBar";
+// import Header from "../includes/Header";
+// import NavBar from "../includes/NavBar";
 import image from "../../Assets/images/icons.svg";
 
-
 function Demo() {
+  const [show, setShow] = useState(false);
   return (
     <GridMain>
-      <HeaderSec>
+      {/* <HeaderSec>
         <Header />
       </HeaderSec>
       <SideBar>
         <NavBar />
-      </SideBar>
+      </SideBar> */}
       <MarketList>
-      <BoxContainer>
+        <BoxContainer>
           <Box1>
             <IconContainer>
               <Image1>
@@ -30,7 +30,7 @@ function Demo() {
               <NumberRight>
                 -58%
                 <LogoImage>
-                  <Arrow></Arrow>y
+                  <Arrow></Arrow>
                 </LogoImage>
               </NumberRight>
             </NumberContainer>
@@ -94,146 +94,249 @@ function Demo() {
           </Box4>
         </BoxContainer>
       </MarketList>
-      <Price>
-      <MiddleContainer>
-          <SectionContainer>
-            <Title>Price</Title>
-            <SubTitle>The price of Bitcoin over the last day</SubTitle>
-            <ColorContainer>
-              <Sub1>178.41 EH/s</Sub1>
-              <Sub2>Esitimated rated</Sub2>
-            </ColorContainer>
-            <TagContainer>
-              <ButtonTag></ButtonTag>
-              <Icon></Icon>
-            </TagContainer>
-            <ImageBarContainer>
-              <ImageBar
-                src={require("../../Assets/images/bar-middle.png")}
-                alt="Bar"
-              />
-            </ImageBarContainer>
-          </SectionContainer>
-        </MiddleContainer>
+      <SectionGraph>
+        <Price>
+          <MiddleContainer>
+            <SectionContainer>
+              <Top>
+                <TitleContainer>
+                  <Title>Price</Title>
+                  <SubTitle>The price of Bitcoin over the last day</SubTitle>
+                </TitleContainer>
+                <TagContainer>
+                  <ButtonTag>ETH</ButtonTag>
+                  <Icon></Icon>
+                </TagContainer>
+              </Top>
+              <ColorContainer>
+                <Sub1>178.41 EH/s</Sub1>
+                <Sub2>Esitimated rated</Sub2>
+              </ColorContainer>
 
-      </Price>
-      <MarketStatus>
-      <RightbarContainer>
-          <ListContainer>
-            <Left>Market Status</Left>
-            <ViewButton>View all</ViewButton>
-          </ListContainer>
-          <TextContainer>
-            <NoteContainer1>
-              <Icon1></Icon1>
-            </NoteContainer1>
-            <TotalContainer>
-              <Text>Total Supply</Text>
-              <Number1>17.5M</Number1>
-            </TotalContainer>
-            <MaxContainer>
-              <Text>Max Supply</Text>
-              <DownContainer>
-                <Down></Down>
-                <Number>17.5%</Number>
-              </DownContainer>
-            </MaxContainer>
-          </TextContainer>
-          <TextContainer>
-            <NoteContainer2>
-              <Icon2></Icon2>
-            </NoteContainer2>
-            <TotalContainer>
-              <Text>Total Supply</Text>
-              <Number1>17.5M</Number1>
-            </TotalContainer>
-            <MaxContainer>
-              <Text>Max Supply</Text>
-              <DownContainer>
-                <Down></Down>
-                <Number>17.5%</Number>
-              </DownContainer>
-            </MaxContainer>
-          </TextContainer>
-          <TextContainer>
-            <NoteContainer3>
-              <Icon3></Icon3>
-            </NoteContainer3>
-            <TotalContainer>
-              <Text>Total Supply</Text>
-              <Number1>17.5M</Number1>
-            </TotalContainer>
-            <MaxContainer>
-              <Text>Max Supply</Text>
-              <DownContainer>
-                <Down></Down>
-                <Number>17.5%</Number>
-              </DownContainer>
-            </MaxContainer>
-          </TextContainer>
+              <ImageBarContainer>
+                <ImageBar
+                  src={require("../../Assets/images/bar-middle.png")}
+                  alt="Bar"
+                />
+              </ImageBarContainer>
+            </SectionContainer>
+          </MiddleContainer>
+        </Price>
+        <MarketStatus>
+          <RightbarContainer>
+            <ListContainer>
+              <Left>Market Status</Left>
+              {show ? (
+                <ViewButton onClick={() => setShow(false)}>
+                  View less
+                </ViewButton>
+              ) : (
+                <ViewButton onClick={() => setShow(true)}>View all</ViewButton>
+              )}
+            </ListContainer>
+            {show ? (
+              <>
+                {" "}
+                <TextContainer>
+                  <NoteContainer1>
+                    <Icon1></Icon1>
+                  </NoteContainer1>
+                  <TotalContainer>
+                    <Text>Total Supply</Text>
+                    <Number1>17.5M</Number1>
+                  </TotalContainer>
+                  <MaxContainer>
+                    <Text>Max Supply</Text>
+                    <DownContainer>
+                      <Down></Down>
+                      <Number>17.5%</Number>
+                    </DownContainer>
+                  </MaxContainer>
+                </TextContainer>
+                <TextContainer>
+                  <NoteContainer2>
+                    <Icon2></Icon2>
+                  </NoteContainer2>
+                  <TotalContainer>
+                    <Text>Total Supply</Text>
+                    <Number1>17.5M</Number1>
+                  </TotalContainer>
+                  <MaxContainer>
+                    <Text>Max Supply</Text>
+                    <DownContainer>
+                      <Down></Down>
+                      <Number>17.5%</Number>
+                    </DownContainer>
+                  </MaxContainer>
+                </TextContainer>
+                <TextContainer>
+                  <NoteContainer3>
+                    <Icon3></Icon3>
+                  </NoteContainer3>
+                  <TotalContainer>
+                    <Text>Total Supply</Text>
+                    <Number1>17.5M</Number1>
+                  </TotalContainer>
+                  <MaxContainer>
+                    <Text>Max Supply</Text>
+                    <DownContainer>
+                      <Down></Down>
+                      <Number>17.5%</Number>
+                    </DownContainer>
+                  </MaxContainer>
+                </TextContainer>
+                <TextContainer>
+                  <NoteContainer3>
+                    <Icon3></Icon3>
+                  </NoteContainer3>
+                  <TotalContainer>
+                    <Text>Total Supply</Text>
+                    <Number1>17.5M</Number1>
+                  </TotalContainer>
+                  <MaxContainer>
+                    <Text>Max Supply</Text>
+                    <DownContainer>
+                      <Down></Down>
+                      <Number>17.5%</Number>
+                    </DownContainer>
+                  </MaxContainer>
+                </TextContainer>
+                <TextContainer>
+                  <NoteContainer3>
+                    <Icon3></Icon3>
+                  </NoteContainer3>
+                  <TotalContainer>
+                    <Text>Total Supply</Text>
+                    <Number1>17.5M</Number1>
+                  </TotalContainer>
+                  <MaxContainer>
+                    <Text>Max Supply</Text>
+                    <DownContainer>
+                      <Down></Down>
+                      <Number>17.5%</Number>
+                    </DownContainer>
+                  </MaxContainer>
+                </TextContainer>{" "}
+              </>
+            ) : (
+              <>
+                {" "}
+                <TextContainer>
+                  <NoteContainer1>
+                    <Icon1></Icon1>
+                  </NoteContainer1>
+                  <TotalContainer>
+                    <Text>Total Supply</Text>
+                    <Number1>17.5M</Number1>
+                  </TotalContainer>
+                  <MaxContainer>
+                    <Text>Max Supply</Text>
+                    <DownContainer>
+                      <Down></Down>
+                      <Number>17.5%</Number>
+                    </DownContainer>
+                  </MaxContainer>
+                </TextContainer>
+                <TextContainer>
+                  <NoteContainer2>
+                    <Icon2></Icon2>
+                  </NoteContainer2>
+                  <TotalContainer>
+                    <Text>Total Supply</Text>
+                    <Number1>17.5M</Number1>
+                  </TotalContainer>
+                  <MaxContainer>
+                    <Text>Max Supply</Text>
+                    <DownContainer>
+                      <Down></Down>
+                      <Number>17.5%</Number>
+                    </DownContainer>
+                  </MaxContainer>
+                </TextContainer>
+                <TextContainer>
+                  <NoteContainer3>
+                    <Icon3></Icon3>
+                  </NoteContainer3>
+                  <TotalContainer>
+                    <Text>Total Supply</Text>
+                    <Number1>17.5M</Number1>
+                  </TotalContainer>
+                  <MaxContainer>
+                    <Text>Max Supply</Text>
+                    <DownContainer>
+                      <Down></Down>
+                      <Number>17.5%</Number>
+                    </DownContainer>
+                  </MaxContainer>
+                </TextContainer>{" "}
+              </>
+            )}
           </RightbarContainer>
-      </MarketStatus>
-      <PriceChange>
-      <MainContainer>
-          <Caption>USD Price Change</Caption>
-          <PriceContainer>
-            <UsContainer>
-              <ChangeContainer>Period</ChangeContainer>
-              <ChangeContainer>Change</ChangeContainer>
-              <ChangeContainer>Change</ChangeContainer>
-              <ImageArrow>
-                 <ChangeContainer>High</ChangeContainer>
-                 <ArrowMark></ArrowMark>
-              </ImageArrow>
-              <ArrowTag>
-              <ChangeContainer>Low</ChangeContainer>
-              <TagImage></TagImage>
-              </ArrowTag>
-            </UsContainer>
-            <UsContainer1>
-              <ChangeContainer1>5 May-12May</ChangeContainer1>
-              <ChangeContainer2>-$ 40.45</ChangeContainer2>
-              <ChangeContainer3>-0.27%</ChangeContainer3>
-              <ImageArrow1>
-                 <ChangeContainer4>$0.21%</ChangeContainer4>
-                 <ArrowMark1></ArrowMark1>
-              </ImageArrow1>
-              <ArrowTag>
-                 <ChangeContainer5>$0.21%</ChangeContainer5>
-                 <TagImage></TagImage>
-              </ArrowTag>
-            </UsContainer1>
-            <UsContainer3>
-              <ChangeContainer1>5 May-12May</ChangeContainer1>
-              <ChangeContainer2>-$ 40.45</ChangeContainer2>
-              <ChangeContainer3>-0.27%</ChangeContainer3>
-              <ImageArrow1>
-                 <ChangeContainer4>$0.21%</ChangeContainer4>
-                 <ArrowMark1></ArrowMark1>
-              </ImageArrow1>
-              <ArrowTag>
-                  <ChangeContainer5>$0.21%</ChangeContainer5>
+        </MarketStatus>
+      </SectionGraph>
+      <MarketingAnalysisConatiner>
+        <PriceChange>
+          <MainContainer>
+            <Caption>USD Price Change</Caption>
+            <PriceContainer>
+              <UsContainer>
+                <ChangeContainer>Period</ChangeContainer>
+                <ChangeContainer>Change</ChangeContainer>
+                <ChangeContainer>Change</ChangeContainer>
+                <ImageArrow>
+                  <ChangeContainer>High</ChangeContainer>
+                  <ArrowMark></ArrowMark>
+                </ImageArrow>
+                <ArrowTag>
+                  <ChangeContainer>Low</ChangeContainer>
                   <TagImage></TagImage>
-              </ArrowTag>
-            </UsContainer3>
-            <UsContainer1>
-              <ChangeContainer1>5 May-12May</ChangeContainer1>
-              <ChangeContainer2>-$ 40.45</ChangeContainer2>
-              <ChangeContainer3>-0.27%</ChangeContainer3>
-              <ImageArrow1>
+                </ArrowTag>
+              </UsContainer>
+              <UsContainer1>
+                <ChangeContainer1>5 May-12May</ChangeContainer1>
+                <ChangeContainer2>-$ 40.45</ChangeContainer2>
+                <ChangeContainer3>-0.27%</ChangeContainer3>
+                <ImageArrow1>
                   <ChangeContainer4>$0.21%</ChangeContainer4>
                   <ArrowMark1></ArrowMark1>
-              </ImageArrow1>
-              <ArrowTag>
-                 <ChangeContainer5>$0.21%</ChangeContainer5>
-                 <TagImage></TagImage>
-              </ArrowTag>
-            </UsContainer1>
-          </PriceContainer>
-        </MainContainer>
-      </PriceChange>
-      <Analytics>
-      <BottomContainer>
+                </ImageArrow1>
+                <ArrowTag>
+                  <ChangeContainer5>$0.21%</ChangeContainer5>
+                  <TagImage></TagImage>
+                </ArrowTag>
+              </UsContainer1>
+              <UsContainer3>
+                <ChangeContainer1>5 May-12May</ChangeContainer1>
+                <ChangeContainer2>-$ 40.45</ChangeContainer2>
+                <ChangeContainer3>-0.27%</ChangeContainer3>
+                <ImageArrow1>
+                  <ChangeContainer4>$0.21%</ChangeContainer4>
+                  <ArrowMark1></ArrowMark1>
+                </ImageArrow1>
+                <ArrowTag>
+                  <ChangeContainer5>$0.21%</ChangeContainer5>
+                  <TagImage></TagImage>
+                </ArrowTag>
+              </UsContainer3>
+              <UsContainer1>
+                <ChangeContainer1>5 May-12May</ChangeContainer1>
+                <ChangeContainer2>-$ 40.45</ChangeContainer2>
+                <ChangeContainer3>-0.27%</ChangeContainer3>
+                <ImageArrow1>
+                  <ChangeContainer4>$0.21%</ChangeContainer4>
+                  <ArrowMark1></ArrowMark1>
+                </ImageArrow1>
+                <ArrowTag>
+                  <ChangeContainer5>$0.21%</ChangeContainer5>
+                  <TagImage></TagImage>
+                </ArrowTag>
+              </UsContainer1>
+            </PriceContainer>
+          </MainContainer>
+        </PriceChange>
+
+        <Analytics>
+          <BottomContainer>
             <RightContainer>
               <Heading>Market Analytics</Heading>
               <ImageContainer>
@@ -256,49 +359,78 @@ function Demo() {
               </MarketContainer>
             </RightContainer>
           </BottomContainer>
-      </Analytics>
+        </Analytics>
+      </MarketingAnalysisConatiner>
     </GridMain>
   );
 }
 
 const GridMain = styled.div`
-  display: grid;
-  grid-template-columns: .2fr 1fr .5fr;
-  grid-template-rows: repeat(2, .5fr) repeat(2, 1fr);
+  /* display: grid;
+  grid-template-columns: 0.2fr 1fr 0.5fr;
+  grid-template-rows: repeat(2, 0.5fr) repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  /* height: 100vh; */
+  height: 90vh;
+  width: 100%; */
+  width: 80%;
 `;
 const HeaderSec = styled.div`
-  grid-area: 1 / 1 / 2 / 4;
+  /* grid-area: 1 / 1 / 2 / 4; */
 `;
 const SideBar = styled.div`
-grid-area: 2 / 1 / 5 / 2;
+  /* grid-area: 2 / 1 / 5 / 2; */
 `;
 const MarketList = styled.div`
-grid-area: 2 / 2 / 3 / 4;
+  /* grid-area: 2 / 2 / 3 / 4; */
 `;
 const Price = styled.div`
-grid-area: 3 / 2 / 4 / 3;
+  /* grid-area: 3 / 2 / 4 / 3; */
+  width: 60%;
 `;
 const MarketStatus = styled.div`
-grid-area: 3 / 3 / 4 / 4;
-margin-bottom: 70px;
+  /* grid-area: 3 / 3 / 4 / 4;
+  margin-bottom: 70px; */
+  width: 38%;
 `;
 const PriceChange = styled.div`
-grid-area: 4 / 2 / 5 / 3;
+  /* grid-area: 4 / 2 / 5 / 3; */
+  width: 59%;
 `;
 const Analytics = styled.div`
-grid-area: 4 / 3 / 5 / 4;
+  /* grid-area: 4 / 3 / 5 / 4; */
+  width: 38%;
 `;
-
-
-
+const SectionGraph = styled.div`
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+`;
+const Top = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const MarketingAnalysisConatiner = styled.div`
+  /* display: flex; */
+  /* justify-content: space-between; */
+  display: flex;
+  width: 95%;
+  margin: 10px auto 0px;
+  align-items: center;
+  justify-content: space-between;
+`;
 const BoxContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
-  // width: 97%;
+  padding: 20px 20px;
+  /* width: 90%; */
+  margin: 0 auto;
 `;
 const Box1 = styled.div`
   width: 17%;
@@ -420,16 +552,15 @@ const Image4 = styled.div`
   align-items: center;
 `;
 
-
 const RightbarContainer = styled.div`
   // position: absolute;
   right: 40px;
   margin-top: 9px;
   padding: 20px;
-  height: 100%;
-  width: 90%;
+  /* height: 100%; */
+  /* width: 90%; */
   background: #171c26;
-  border-radius: 20px;
+  border-radius: 15px;
 `;
 const ListContainer = styled.div`
   display: flex;
@@ -540,8 +671,9 @@ const BottomContainer = styled.div`
   width: 95%;
   background: #171c26;
   border-radius: 10px;
-`;
 
+  padding: 10px 5px;
+`;
 
 const RightContainer = styled.div``;
 const Heading = styled.span`
@@ -600,26 +732,55 @@ const String2 = styled.span`
   font-weight: bold;
 `;
 
-
 const MiddleContainer = styled.div`
   margin-top: 9px;
   width: 95%;
   /* height: 240px; */
   padding: 20px;
   background: #171c26;
-  border-radius: 20px;
+  border-radius: 15px;
 `;
 
-
 const SectionContainer = styled.span``;
-const Title = styled.span``;
-const SubTitle = styled.span``;
-const ColorContainer = styled.div``;
-const Sub1 = styled.span``;
-const Sub2 = styled.span``;
-const TagContainer = styled.div``;
-const ButtonTag = styled.button``;
-const Icon = styled.small``;
+const Title = styled.span`
+  color: #fff;
+`;
+const SubTitle = styled.span`
+  color: #fff;
+`;
+const ColorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 317px;
+  top: 11%;
+  /* background: #20b8fe; */
+  background: linear-gradient(to right, #015ce8, #20b8fe);
+  padding: 3px 34px;
+`;
+const Sub1 = styled.span`
+  color: #fff;
+`;
+const Sub2 = styled.span`
+  font-size: 12px;
+  color: #fff;
+`;
+const TagContainer = styled.button`
+  height: 20px;
+  display: block;
+  background: #171c26;
+  border-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+`;
+const ButtonTag = styled.span`
+  color: #fff;
+  font-size: 11px;
+`;
+const Icon = styled(IconImage1)`
+  background-position: -308px -175px;
+`;
 const ImageBarContainer = styled.div`
   width: 100%;
 `;
@@ -629,23 +790,25 @@ const ImageBar = styled.img`
   display: block;
 `;
 
-
-
 const MainContainer = styled.div`
   background-color: #171c26;
+
+  padding: 10px 20px;
+  border-radius: 15px;
 `;
 const Caption = styled.div`
   font-size: 18px;
   font-weight: bold;
   color: #fff;
-
 `;
-const PriceContainer = styled.div``;
+const PriceContainer = styled.div`
+  margin-top: 15px;
+`;
 const UsContainer = styled.div`
-   display: flex;
-   justify-content: space-between;
-   border:1px solid #000;
-   height:20px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #fff;
+  height: 20px;
 `;
 const ArrowMark = styled.small`
   background: url(${image});
@@ -654,21 +817,24 @@ const ArrowMark = styled.small`
   height: 25px;
   background-position: -472px -19px;
 `;
-const ChangeContainer = styled.div``;
+const ChangeContainer = styled.div`
+  color: #fff;
+`;
 const ImageArrow = styled.small`
-   display: flex;
-   justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 `;
 const ArrowTab = styled.small``;
 const ArrowTag = styled.div``;
 const TagImage = styled(ArrowMark)`
-    width: 18px;
+  width: 18px;
   height: 23px;
   background-position: -472px -115px;
 `;
 const UsContainer1 = styled.div`
-    display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  color: #51555e;
 `;
 const ChangeContainer1 = styled.div``;
 const ChangeContainer2 = styled.div``;
@@ -679,20 +845,21 @@ const ChangeContainer5 = styled.div``;
 const Arrow1 = styled.div``;
 const ArrowIcon1 = styled.div``;
 const ImageArrow1 = styled.small`
-     display: flex;
-   justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 `;
 const ArrowMark1 = styled(ArrowMark)`
- width: 18px;
+  width: 18px;
   height: 25px;
   background-position: -472px -19px;
 `;
 const UsContainer3 = styled.div`
   display: flex;
-   justify-content: space-between;
-   border:1px solid #000;
-   height:20px;
+  justify-content: space-between;
+  border: 1px solid #000;
+  height: 20px;
+  color: #fff;
+  background: linear-gradient(to right, #aabbee, #50247d);
 `;
-
 
 export default Demo;

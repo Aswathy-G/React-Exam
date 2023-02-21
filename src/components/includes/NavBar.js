@@ -4,16 +4,13 @@ import styled from "styled-components";
 import image from "../../Assets/images/icons.svg";
 
 function NavBar() {
-
   return (
     <>
-      
-
       <LeftContainer>
         <Wrapper2>
           <MenuContainer>
             <ListItem className="Title">MENU</ListItem>
-            <ListItemLink>
+            <ListItemLink to="/">
               <Icon1></Icon1>
               Overview
             </ListItemLink>
@@ -63,14 +60,14 @@ export default NavBar;
 //   height: 100vh;
 // `;
 
-
 const LeftContainer = styled.div`
-  /* width: 15%; */
-  height: calc(100vh - 125px);
-  position: fixed;
+  width: 20%;
+  height: calc(100vh - 90px);
+  /* position: fixed; */
   background: #1b1c30;
   /* margin-top: -19px; */
   /* display: inline-block; */
+
 `;
 const Wrapper2 = styled.div`
   padding: 0 10px;
