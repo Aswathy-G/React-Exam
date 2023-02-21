@@ -296,10 +296,10 @@ function Demo() {
                 <ChangeContainer1>5 May-12May</ChangeContainer1>
                 <ChangeContainer2>-$ 40.45</ChangeContainer2>
                 <ChangeContainer3>-0.27%</ChangeContainer3>
-                <ImageArrow1>
+                <ArrowTag1>
                   <ChangeContainer4>$0.21%</ChangeContainer4>
-                  <ArrowMark1></ArrowMark1>
-                </ImageArrow1>
+                  <TagImage1></TagImage1>
+                </ArrowTag1>
                 <ArrowTag>
                   <ChangeContainer5>$0.21%</ChangeContainer5>
                   <TagImage></TagImage>
@@ -309,10 +309,10 @@ function Demo() {
                 <ChangeContainer1>5 May-12May</ChangeContainer1>
                 <ChangeContainer2>-$ 40.45</ChangeContainer2>
                 <ChangeContainer3>-0.27%</ChangeContainer3>
-                <ImageArrow1>
+                <ArrowTag1>
                   <ChangeContainer4>$0.21%</ChangeContainer4>
-                  <ArrowMark1></ArrowMark1>
-                </ImageArrow1>
+                  <TagImage1></TagImage1>
+                </ArrowTag1>
                 <ArrowTag>
                   <ChangeContainer5>$0.21%</ChangeContainer5>
                   <TagImage></TagImage>
@@ -322,10 +322,10 @@ function Demo() {
                 <ChangeContainer1>5 May-12May</ChangeContainer1>
                 <ChangeContainer2>-$ 40.45</ChangeContainer2>
                 <ChangeContainer3>-0.27%</ChangeContainer3>
-                <ImageArrow1>
+                <ArrowTag1>
                   <ChangeContainer4>$0.21%</ChangeContainer4>
-                  <ArrowMark1></ArrowMark1>
-                </ImageArrow1>
+                  <TagImage1></TagImage1>
+                </ArrowTag1>
                 <ArrowTag>
                   <ChangeContainer5>$0.21%</ChangeContainer5>
                   <TagImage></TagImage>
@@ -803,12 +803,14 @@ const Caption = styled.div`
 `;
 const PriceContainer = styled.div`
   margin-top: 15px;
+  margin: 20px;
 `;
 const UsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border: 1px solid #fff;
-  height: 20px;
+  height: 25px;
+  margin-top: 10px;
 `;
 const ArrowMark = styled.small`
   background: url(${image});
@@ -825,7 +827,10 @@ const ImageArrow = styled.small`
   justify-content: space-around;
 `;
 const ArrowTab = styled.small``;
-const ArrowTag = styled.div``;
+const ArrowTag = styled.div`
+   display: flex;
+  justify-content: space-around;
+`;
 const TagImage = styled(ArrowMark)`
   width: 18px;
   height: 23px;
@@ -835,6 +840,7 @@ const UsContainer1 = styled.div`
   display: flex;
   justify-content: space-between;
   color: #51555e;
+  margin-top: 10px;
 `;
 const ChangeContainer1 = styled.div``;
 const ChangeContainer2 = styled.div``;
@@ -857,9 +863,21 @@ const UsContainer3 = styled.div`
   display: flex;
   justify-content: space-between;
   border: 1px solid #000;
-  height: 20px;
+  height: 25px;
   color: #fff;
   background: linear-gradient(to right, #aabbee, #50247d);
+  margin-top: 10px;
+`;
+const ArrowTag1 = styled.div`
+   display: flex;
+  justify-content: space-around;
+`;
+const TagImage1 = styled(ArrowMark)`
+   width: 18px;
+  height: 23px;
+  background-position: -472px -115px;
+ /* transform: rotate(-90deg); */
+ transform: rotate(2deg);
 `;
 
 export default Demo;

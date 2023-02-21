@@ -62,7 +62,7 @@ export default NavBar;
 
 const LeftContainer = styled.div`
   width: 20%;
-  height: calc(100vh - 90px);
+  /* height: calc(100vh - 90px); */
   /* position: fixed; */
   background: #1b1c30;
   /* margin-top: -19px; */
@@ -88,7 +88,7 @@ const ListItem = styled.h3`
 const ListItemLink = styled(Link)`
   display: block;
   text-decoration: none;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   color: #4d525f;
   // margin-left: 25px;
   display: flex;
@@ -151,4 +151,5 @@ const RightArrow = styled(PlusIcon)`
   height: 16px;
   background-position: -305px -176px;
   margin-left: 7px;
+  transform: rotate(-90deg);
 `;
