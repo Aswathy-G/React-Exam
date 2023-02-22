@@ -18,30 +18,36 @@ function NavBar() {
               <Icon2></Icon2>
               Trader Profile
             </ListItemLink>
-            <ListItemLink to="/echart">
-              <Icon3></Icon3>
-              Echart
+            <ListItemLink1 to="/echart">
+              <LinkA>
+                 <Icon3></Icon3>
+                  <Text>Echart</Text>
+              </LinkA>
               <DownArrow></DownArrow>
-            </ListItemLink>
+            </ListItemLink1>
             <ListItemLink to="/mailbox">
               <Icon4></Icon4>
               Mailbox
             </ListItemLink>
-            <ListItemLink to="/pages">
-              <Icon5></Icon5>
-              Pages
+            <ListItemLink1 to="/pages">
+              <LinkA>
+                 <Icon5></Icon5>
+                 <Text>Pages</Text>
+              </LinkA>
               <DownArrow></DownArrow>
-            </ListItemLink>
+            </ListItemLink1>
             <ListItem className="Title">OTHERS</ListItem>
             <ListItemLink to="/support">
               <Icon6></Icon6>
               Support
             </ListItemLink>
-            <ListItemLink to="/settings">
-              <Icon7></Icon7>
-              Settings
+            <ListItemLink1 to="/settings">
+              <LinkA>
+                <Icon7></Icon7>
+                <Text>Settings</Text>
+              </LinkA>
               <DownArrow></DownArrow>
-            </ListItemLink>
+            </ListItemLink1>
           </MenuContainer>
           <Button>
             <PlusIcon></PlusIcon>
@@ -61,7 +67,7 @@ export default NavBar;
 // `;
 
 const LeftContainer = styled.div`
-  width: 20%;
+  width: 18%;
   /* height: calc(100vh - 90px); */
   /* position: fixed; */
   background: #1b1c30;
@@ -95,6 +101,23 @@ const ListItemLink = styled(Link)`
   align-items: center;
   margin-left: 10px;
 `;
+const ListItemLink1 = styled.div`
+   display: flex;
+   justify-content: space-between;
+`;
+const LinkA = styled.div`
+  display: flex;
+  justify-content: space-around;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 50px;
+  color: #4d525f;
+  // margin-left: 25px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+`;
+const Text = styled.span``;
 const Icon1 = styled.small`
   background: url(${image});
   display: inline-block;
@@ -153,3 +176,4 @@ const RightArrow = styled(PlusIcon)`
   margin-left: 7px;
   transform: rotate(-90deg);
 `;
+
