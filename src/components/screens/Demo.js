@@ -877,7 +877,7 @@ const TagImage1 = styled(ArrowMark)`
   height: 23px;
   background-position: -472px -115px;
  /* transform: rotate(-90deg); */
- transform: rotate(2deg);
+ transform: rotate(181deg);
 `;
 
 export default Demo;

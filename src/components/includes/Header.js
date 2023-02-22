@@ -26,7 +26,8 @@ function Header() {
           <IconContainer>
             <IconImage2></IconImage2>
             <IconImage3></IconImage3>
-            <GraphIcon></GraphIcon>
+            <GraphImage src={require("../../Assets/images/barimage.png")}
+            alt="Bar" />
           </IconContainer>
           <Title>Reports</Title>
           <ImageSection>
@@ -55,7 +56,7 @@ const Wrapper = styled.div`
   width: 95%;
   margin: auto;
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
 `;
 const LogoBox = styled.div`
@@ -98,7 +99,7 @@ const RightSide = styled.div`
   display: flex;
   width: 30%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-right: 5px;
 `;
 const IconContainer = styled.div`
@@ -113,7 +114,7 @@ const IconImage3 = styled(IconImage)`
   background-position: -421px -160px;
   margin-right: 10px;
 `;
-const GraphIcon = styled.img``;
+const GraphImage = styled.img``;
 const Title = styled.h3`
   color: #fff;
   font-size: 16px;
