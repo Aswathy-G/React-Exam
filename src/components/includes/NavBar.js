@@ -67,7 +67,7 @@ export default NavBar;
 // `;
 
 const LeftContainer = styled.div`
-  width: 18%;
+  /* width: 18%; */
   /* height: calc(100vh - 90px); */
   /* position: fixed; */
   background: #1b1c30;
@@ -101,9 +101,10 @@ const ListItemLink = styled(Link)`
   align-items: center;
   margin-left: 10px;
 `;
-const ListItemLink1 = styled.div`
+const ListItemLink1 = styled(Link)`
    display: flex;
    justify-content: space-between;
+   text-decoration: none;
 `;
 const LinkA = styled.div`
   display: flex;

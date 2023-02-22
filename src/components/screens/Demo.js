@@ -747,12 +747,13 @@ const Title = styled.span`
 `;
 const SubTitle = styled.span`
   color: #fff;
+  font-size: 12px;
 `;
 const ColorContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: 317px;
+  left: 252px;
   top: 11%;
   /* background: #20b8fe; */
   background: linear-gradient(to right, #015ce8, #20b8fe);

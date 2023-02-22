@@ -26,7 +26,7 @@ function Header() {
           <IconContainer>
             <IconImage2></IconImage2>
             <IconImage3></IconImage3>
-            <GraphImage src={require("../../Assets/images/barimage.png")}
+            <GraphImage src={require("../../Assets/images/baricon.png")}
             alt="Bar" />
           </IconContainer>
           <Title>Reports</Title>
@@ -115,9 +115,9 @@ const IconImage3 = styled(IconImage)`
   margin-right: 10px;
 `;
 const GraphImage = styled.img``;
-const Title = styled.h3`
+const Title = styled.h6`
   color: #fff;
-  font-size: 16px;
+  font-size: 10px;
 `;
 const ImageSection = styled.div`
   width: 40px;
@@ -127,9 +127,9 @@ const Person = styled.img`
   display: block;
   border-radius: 50%;
 `;
-const SubHeader = styled.h3`
+const SubHeader = styled.h6`
   color: #fff;
-  font-size: 16px;
+  font-size: 10px;
 `;
 const ArrowContainer = styled.div``;
 const ArrowImage = styled(IconImage)`
