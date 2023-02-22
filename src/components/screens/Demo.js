@@ -4,6 +4,7 @@ import styled from "styled-components";
 // import NavBar from "../includes/NavBar";
 import image from "../../Assets/images/icons.svg";
 
+
 function Demo() {
   const [show, setShow] = useState(false);
   return (
@@ -472,6 +473,7 @@ const SubHeading = styled.h3`
   color: #fff;
   margin: 2px;
   margin-left: 23px;
+  font-size: 14px;
 `;
 const NumberContainer = styled.div`
   color: #fff;
@@ -767,17 +769,23 @@ const Sub2 = styled.span`
   color: #fff;
 `;
 const TagContainer = styled.button`
-  height: 20px;
+  height: 23px;
   display: block;
   background: #171c26;
   border-color: #fff;
   border-radius: 5px;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  width: 65px;
 `;
 const ButtonTag = styled.span`
   color: #fff;
-  font-size: 11px;
+  height: 23px;
+  font-size: 8px;
+  /* text-align: center;
+  align-items: center; */
+  margin-top: 10px;
 `;
 const Icon = styled(IconImage1)`
   background-position: -308px -175px;
@@ -810,8 +818,9 @@ const UsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border: 1px solid #fff;
-  height: 25px;
+  height: 20px;
   margin-top: 10px;
+  font-size: 13px;
 `;
 const ArrowMark = styled.small`
   background: url(${image});
@@ -826,11 +835,13 @@ const ChangeContainer = styled.div`
 const ImageArrow = styled.small`
   display: flex;
   justify-content: space-around;
+  font-size: 14px;
 `;
 const ArrowTab = styled.small``;
 const ArrowTag = styled.div`
    display: flex;
   justify-content: space-around;
+  font-size: 13px;
 `;
 const TagImage = styled(ArrowMark)`
   width: 18px;
@@ -842,6 +853,7 @@ const UsContainer1 = styled.div`
   justify-content: space-between;
   color: #51555e;
   margin-top: 10px;
+  font-size: 13px;
 `;
 const ChangeContainer1 = styled.div``;
 const ChangeContainer2 = styled.div``;
@@ -868,6 +880,7 @@ const UsContainer3 = styled.div`
   color: #fff;
   background: linear-gradient(to right, #aabbee, #50247d);
   margin-top: 10px;
+  font-size: 13px;
 `;
 const ArrowTag1 = styled.div`
    display: flex;
