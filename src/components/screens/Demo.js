@@ -393,6 +393,9 @@ const MarketStatus = styled.div`
   /* grid-area: 3 / 3 / 4 / 4;
   margin-bottom: 70px; */
   width: 38%;
+  @media all and(max-width: 1380px){
+    width:30px;
+  }  
 `;
 const PriceChange = styled.div`
   /* grid-area: 4 / 2 / 5 / 3; */
@@ -755,11 +758,15 @@ const ColorContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: 252px;
+  left: 314px;
   top: 11%;
   /* background: #20b8fe; */
   background: linear-gradient(to right, #015ce8, #20b8fe);
   padding: 3px 34px;
+  @media all and(max-with: 1280px){
+    left: 202px;
+    top: 9%;
+  }
 `;
 const Sub1 = styled.span`
   color: #fff;
@@ -767,6 +774,9 @@ const Sub1 = styled.span`
 const Sub2 = styled.span`
   font-size: 12px;
   color: #fff;
+  @media all and(max-with: 1280px){
+    font-size: 11px;
+  }
 `;
 const TagContainer = styled.button`
   height: 23px;
